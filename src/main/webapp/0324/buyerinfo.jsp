@@ -10,39 +10,32 @@
 <script type="text/javascript">
 	xhr = new XMLHttpRequest;
 $(function(){
-	$('#lprod').on('click', function(){
-		$.ajax({
-			url : "http://localhost/jqpro/0324/LprodController.jsp",
-			type : 'get',
-			success : function(res){
-				code = "<table border='1'>";
-				code += "<tr><td>상품번호</td><td>상품코드</td>";
-				code += "<td>상품명</td></tr>";
-				$.each(res, function(i, v){
-					code += `<tr><td> \${v.id} </td><td> \${v.gu} </td>`;
-					code += `<td> \${v.nm} </td></tr>`;
-					})
-				code += `</table>`;
-				$('#result1').html(code);
-			},
-			error : function(xhr) {
-				alert("상태 : " + xhr.status);
-			},
-			dataType : 'json'
-		})
+	$.ajax({
+		
 	})
+		
+		
 })
 </script>
 </head>
 <body>
 
 	<div class="box">
-		<p>
-		</p>
 		
-		<input type="button" value="LPROD리스트" id="lprod">
-		<br><br>
-		<div class="result" id="result1"></div>
+		<div class="result" id="result1">
+		<table border="1">
+			<th>
+				<td>거래처 이름</td>
+				<td>거래처상세정보</td>
+			</th>
+			<tr>
+				<td id="buyerId"></td>
+				<td id="buyerInfo"></td>
+			</tr>
+		
+		</table>
+		
+		</div>
 	</div>
 
 </body>
