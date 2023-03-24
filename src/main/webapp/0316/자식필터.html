@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+
+proc1 = () => {
+// 	$('tr:first-child').css('background', '#f198aa');
+// 	$('tr:nth-child(2)').css('background', '#FF6A89');
+// 	$('tr:nth-child(3)').css('background', '#FF87BE');
+// 	$('tr:nth-child(4)').css('background', '#FF32B1');
+// 	$('tr:last-child').css('background', '#FFD2FF');
+// 	$('tr:first-child').css('background', 'black');
+
+	$('td:first-child').css('background', '#f198aa');
+	$('td:nth-child(2)').css('background', '#FF6A89');
+	$('td:nth-child(3)').css('background', '#FF87BE');
+	$('td:nth-child(4)').css('background', '#FF32B1');
+	
+	// 맨처음에 td로 background를 주었으면 tr은 child 사용 불가 
+	//고로 tr:child td 로 tr 후손 중 첫번 쨰 td 선택 밑과 같이 해야함
+	$('tr:first-child td').css('background', 'black');
+}	
+	
+
+
+</script>
+
+<style type="text/css">
+table {
+	border : 1px solid blue;
+}
+td{
+	width : 250px;
+	height: 50px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+	<div class="box">
+		<p>
+		</p>
+		
+		<input type="button" value="확인" onclick="proc1()"><br><br>
+		<div class="result" id="result1">
+		<table border="1">
+				<tr>
+					<td>일</td>
+					<td>이</td>
+					<td>삼</td>
+					<td>사</td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+	</div>
+</body>
+</html>
