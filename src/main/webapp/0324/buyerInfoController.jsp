@@ -14,11 +14,13 @@
 <%
 IBuyerService service = BuyerServiceImpl.getInstance();
 
-List<BuyerVO> buyerList = service.selectIdName();
+String id = request.getParameter("id");
 
-request.setAttribute("BuyerList", buyerList);
+BuyerVO vo = service.selectById(id);
 
-RequestDispatcher disp = request.getRequestDispatcher("/view/buyerData.jsp");
+request.setAttribute("BuyerInfo", vo);
+
+RequestDispatcher disp = request.getRequestDispatcher("/view/buyerInfoData.jsp");
 disp.forward(request, response);
 %>
 
